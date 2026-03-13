@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Интерактивный блиц-тест по теме конфликта поколений" />
+  <title>Блиц-тест - Конфликт поколений</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-bg"></div>
+  <main class="app-shell">
+    <section id="screen-start" class="screen screen--active">
+      <div class="hero-card glass">
+        <div class="eyebrow">Продукт проекта</div>
+        <h1>Как вы воспринимаете конфликт поколений?</h1>
+        <p class="hero-text">
+          Пройдите короткий тест из 8 вопросов и узнайте, к какой модели взаимодействия поколений вы ближе.
+        </p>
+
+        <div class="hero-grid">
+          <article class="mini-card">
+            <div class="mini-card__title">Быстро</div>
+            <p>В среднем 1-2 минуты</p>
+          </article>
+          <article class="mini-card">
+            <div class="mini-card__title">Без регистрации</div>
+            <p>Никаких логинов и лишних данных</p>
+          </article>
+          <article class="mini-card">
+            <div class="mini-card__title">С персональным итогом</div>
+            <p>В конце вы получите свой результат</p>
+          </article>
+        </div>
+
+        <div class="hero-actions">
+          <button id="start-btn" class="btn btn--primary">Начать тест</button>
+          <button id="about-btn" class="btn btn--ghost" type="button">Что это за тест?</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="screen-quiz" class="screen" aria-live="polite">
+      <div class="quiz-card glass">
+        <div class="quiz-top">
+          <div class="progress-text" id="progress-text">Вопрос 1 из 8</div>
+          <button id="restart-top-btn" class="text-btn" type="button">Сбросить</button>
+        </div>
+        <div class="progress-track">
+          <div id="progress-fill" class="progress-fill"></div>
+        </div>
+
+        <div class="question-wrap">
+          <div id="question-tag" class="question-tag">Ситуация</div>
+          <h2 id="question-title" class="question-title"></h2>
+          <div id="answers" class="answers"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="screen-result" class="screen" aria-live="polite">
+      <div class="result-card glass">
+        <div class="eyebrow">Ваш результат</div>
+        <h2 id="result-title"></h2>
+        <p id="result-summary" class="result-summary"></p>
+
+        <div class="score-block">
+          <div class="score-block__title">Распределение ответов</div>
+          <div id="score-bars" class="score-bars"></div>
+        </div>
+
+        <div class="result-panel">
+          <div class="result-panel__title">Что это значит</div>
+          <p id="result-description"></p>
+        </div>
+
+        <div class="result-panel result-panel--accent">
+          <div class="result-panel__title">Главный вывод</div>
+          <p id="result-takeaway"></p>
+        </div>
+
+        <div class="result-actions">
+          <button id="retry-btn" class="btn btn--primary">Пройти ещё раз</button>
+          <button id="copy-btn" class="btn btn--ghost" type="button">Скопировать результат</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="about-dialog" class="about-dialog glass">
+    <button id="close-about-btn" class="dialog-close" aria-label="Закрыть окно">×</button>
+    <div class="eyebrow">О продукте проекта</div>
+    <h2>Мини-сайт для интерактивного блиц-теста</h2>
+    <p>
+      Этот тест создан как продукт проекта на тему конфликта поколений. Он не ставит диагнозы и не делит людей на «правых» и «неправых», а показывает, к какой модели взаимодействия поколений человек ближе.
+    </p>
+    <p>
+      Все ответы обрабатываются прямо в браузере. Никакие персональные данные не собираются.
+    </p>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
